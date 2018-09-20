@@ -2,8 +2,10 @@
 layout: post
 title: [MICCAI-17] Learn to Track,Deep Learning for Tractography
 categories: [Paper]
-description: [MICCAI-17] Learn to Track,Deep Learning for Tractography
+description: Deep Learning for Tractography
 keywords: Deep Learning, tracking
+---
+深度学习，尤其是 RNN , 在这样的纤维/血管等流线型数据的追踪方面大有可为。
 ---
 
 ## 题目
