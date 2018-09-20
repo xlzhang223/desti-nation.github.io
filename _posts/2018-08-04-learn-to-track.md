@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Learn to Track: Deep Learning for Tractography
+title: Learn to Track - Deep Learning for Tractography
 categories: [Paper]
-description: Deep Learning for Tractography
-keywords: Deep Learning, tracking
+description: Learn to Track
+keywords: Track, DL
 ---
 
 From MICCAI 2017
