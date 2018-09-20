@@ -1,7 +1,8 @@
-- name: Software Engineer Keywords
+- name: 技术菜鸟
   keywords:
       - C
       - Python
+      - PyTorch
 
 - name: 研究兴趣
   keywords:
