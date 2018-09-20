@@ -1,19 +1,14 @@
 - name: Software Engineer Keywords
   keywords:
-      - Java
-      - C++
+      - C
       - Python
-      - Design Patterns
 
-- name: Mobile Developer Keywords
+- name: 研究兴趣
   keywords:
-      - Android
-      - Reverse Engineering
+      - 医学图像
 
-- name: Windows Developer Keywords
+- name: 业余爱好
   keywords:
-      - Win32 SDK
-      - DuiLib
-      - WTL
-      - COM
-      - WinDbg
+      - 摄影
+      - 看新闻
+      - 手机美化
