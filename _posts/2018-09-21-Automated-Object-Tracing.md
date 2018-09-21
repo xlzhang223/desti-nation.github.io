@@ -37,9 +37,15 @@ From MICCAI 2018
 
 ## 词汇
 `methodology` 方法学，方法论
+
 `pathology` 病理学
+
 `contour` 轮廓
+
 `adequate` 充足的，适当的
+
 `orders of magnitude` 数量级
+
 `leverage` 利用
+
 `auxiliary` 辅助物，辅助的
