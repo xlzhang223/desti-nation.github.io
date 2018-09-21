@@ -35,7 +35,7 @@ From MICCAI 2018
 ## 缺点
 对于何时追踪终止这个问题没有给出解答，留待后需完善。
 
-# 词汇
+## 词汇
 `methodology` 方法学，方法论
 `pathology` 病理学
 `contour` 轮廓
