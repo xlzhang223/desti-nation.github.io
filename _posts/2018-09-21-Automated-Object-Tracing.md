@@ -10,24 +10,24 @@ From MICCAI 2018
 
 ---
 
-## 题目
+## 1 题目
  Automated Object Tracing for Biomedical Image Segementation Using a Deep Convolution Neural Network
 
-## 主要内容
-利用 CNN，通过追踪边界来达到分割的效果。
+## 2 背景
+当前分割技术可能导致分割结果不连续
 
-- 原始图像结合了其他语义分割的网络的结果（U-net），作为图片的一个辅助通道。
+## 3 主要工作
+利用 CNN，通过追踪（细胞）边界来达到（细胞）分割的效果。
 
-- 初始方向：来自于一段很短的人的手工标注 or U-net 分割的边界的一段
+## 4 模型
 
-- 输入：一个与之前 trace 好的点有重叠的 patch
+![mark](http://pcxhsqn8a.bkt.clouddn.com/blog/180921/C24hg3F7fk.png?imageslim)
 
-- 输出：要追踪的下 m 个点
+## 算法流程
+![mark](http://pcxhsqn8a.bkt.clouddn.com/blog/180921/g576f3i12H.png?imageslim)
 
-通过反复迭代，直到追踪的点和初始点相交，追踪结束。
-
-- 结果：在该 challenge 中比常见的语义分割网络要好， 达到了 state-of-the-art
-
+## 创新点
+将分割问题重新定义为了边界追踪问题。
 
 ## 启示
 追踪的时候可以`手工` or `利用其他网络的结果 ` 来给与初始追踪方向，前者人机结合的方法也可以称为`human-in-the-loop`。
@@ -37,3 +37,9 @@ From MICCAI 2018
 
 # 词汇
 `methodology` 方法学，方法论
+`pathology` 病理学
+`contour` 轮廓
+`adequate` 充足的，适当的
+`orders of magnitude` 数量级
+`leverage` 利用
+`auxiliary` 辅助物，辅助的
