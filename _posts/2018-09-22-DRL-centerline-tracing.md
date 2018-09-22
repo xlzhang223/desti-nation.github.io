@@ -9,6 +9,7 @@ keywords: Reinforcement Learning
 From MICCAI 2018
 
 ---
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 ## 1 题目
 Deep Reinforcement Learning for Vessel Centerline Tracing in Multi-modality 3D Volumes
