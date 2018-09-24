@@ -33,6 +33,7 @@ Deep Reinforcement Learning for Vessel Centerline Tracing in Multi-modality 3D V
 
 $$D(p_{t}, G) = \left \| \lambda (p_{t} - g_{d+k}) + (1-\lambda)(g_{d+k+1} - g_{d+k-1}) \right \| \tag{1}$$
 
+前半部分让当前点尽可能靠近血管，后半部分是 momentum 使得点沿着曲线的方向走。
 
 
 
