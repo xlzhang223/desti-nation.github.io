@@ -31,7 +31,11 @@ Deep Reinforcement Learning for Vessel Centerline Tracing in Multi-modality 3D V
 
 接下来定义 point-to-curve 距离度量：
 
-$$D(p_{t}, G) = \left \| \lambda (p_{t} - g_{d+k}) + (1-\lambda)(g_{d+k+1} - g_{d+k-1}) \right \| $$
+$$D(p_{t}, G) = \left \| \lambda (p_{t} - g_{d+k}) + (1-\lambda)(g_{d+k+1} - g_{d+k-1}) \right \| \tag{1}$$
+
+
+
+
 
 
 ## 算法流程
@@ -56,3 +60,4 @@ $$D(p_{t}, G) = \left \| \lambda (p_{t} - g_{d+k}) + (1-\lambda)(g_{d+k+1} - g_{
 ## 参考资料
 - [Understanding RL: The Bellman Equations](https://joshgreaves.com/reinforcement-learning/understanding-rl-the-bellman-equations/)
 - [[笔记]Playing Atari with Deep Reinforcement Learning](https://junmo1215.github.io/paper/2017/11/03/Note-Playing-Atari-with-Deep-Reinforcement-Learning.html)
+- [Markdown下LaTeX公式、编号、对齐](https://www.zybuluo.com/fyywy520/note/82980)
