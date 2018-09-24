@@ -21,7 +21,17 @@ Deep Reinforcement Learning for Vessel Centerline Tracing in Multi-modality 3D V
 使用`增强学习`构建了一个 end-to-end 的模型，来追踪3D多模态医学数据中的`血管中心线`。
 
 ## 4 方法
-给 3D 图像 $I$ 以及血管中心线坐标 list $G = [g_{0}, g_{1}, ..., g_{n}]$, 期望 agent 学习到一个最优的轨迹 $P = [p_{0}, p_{1}, ..., p_{m}]$。将该问题视为序列决策问题，并建模为一个基于回报的马尔可夫决策过程 (MDP)。
+给 3D 图像 $I$ 以及血管中心线坐标 list $G = [g_{0}, g_{1}, ..., g_{n}]$, 期望 agent 学习到一个最优的轨迹 $P = [p_{0}, p_{1}, ..., p_{m}]$。将该问题视为序列决策问题，并建模为一个基于回报的马尔可夫决策过程 (MDP)。在时间步 $t$，agent 从状态空间 $S$ 接受状态 $s$，并依据策略 $\pi$，从动作空间 $A$ 中选择动作 $a$。
+
+对于血管中心线追踪问题，我们允许 agent 在相邻的 voxels 中移动，所以其动作空间 $A$ = {上，下，左，右，前，后} 6个动作。
+
+标量 reward 记为 $r_{t} = r_{s, a}^{s'}$，表示从状态 $s$ 采取动作 $a$ 到达 $s'$ 的回报。
+
+从当前点 $p_{t}$ 到血管上最近的点记为 $g_{d}$。
+
+接下来定义 point-to-curve 距离度量：
+
+$$D(p_{t}, G) = \left \| \lambda (p_{t} - g_{d+k}) + (1-\lambda)(g_{d+k+1} - g_{d+k-1}) \right \| $$
 
 
 ## 算法流程
@@ -44,4 +54,5 @@ Deep Reinforcement Learning for Vessel Centerline Tracing in Multi-modality 3D V
 `optimal` 最优的，最佳的
 
 ## 参考资料
-- 
+- [Understanding RL: The Bellman Equations](https://joshgreaves.com/reinforcement-learning/understanding-rl-the-bellman-equations/)
+- [[笔记]Playing Atari with Deep Reinforcement Learning](https://junmo1215.github.io/paper/2017/11/03/Note-Playing-Atari-with-Deep-Reinforcement-Learning.html)
