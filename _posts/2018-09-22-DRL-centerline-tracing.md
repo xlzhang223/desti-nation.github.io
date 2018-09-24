@@ -5,7 +5,6 @@ categories: [Paper]
 description: DRL
 keywords: Reinforcement Learning
 ---
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 From MICCAI 2018
 
@@ -25,9 +24,6 @@ Deep Reinforcement Learning for Vessel Centerline Tracing in Multi-modality 3D V
 DRL:
 Action Space 
 
-$$E = mc^2$$
-
-\\(E = mc^2\\)
 
 ## 算法流程
 
