@@ -24,6 +24,7 @@ Deep Reinforcement Learning for Vessel Centerline Tracing in Multi-modality 3D V
 DRL:
 Action Space 
 
+$$A_{ab} = c*d$$
 
 ## 算法流程
 
