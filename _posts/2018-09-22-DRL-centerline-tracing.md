@@ -33,16 +33,36 @@ Deep Reinforcement Learning for Vessel Centerline Tracing in Multi-modality 3D V
 
 $$D(p_{t}, G) = \left \| \lambda (p_{t} - g_{d+k}) + (1-\lambda)(g_{d+k+1} - g_{d+k-1}) \right \| \tag{1}$$
 
-前半部分让当前点尽可能靠近血管，后半部分是 momentum 使得点沿着曲线的方向走。
+前半部分让当前点尽可能靠近血管，后半部分是 momentum 使得点沿着曲线的方向走。其中 $k$ 是在均匀采样的曲线上的前进偏移量（默认 $k$ = 1）。
+
+回报函数定义为：
+
+![mark](http://pcxhsqn8a.bkt.clouddn.com/blog/180925/G8EFfLkGFf.png?imageslim)
+
+$l$ 是凭借经验选择的阈值。接下来的操作和 Deep Q Learning 相同，用 $Q^{\pi}(s, a;\theta)$ 来逼近 $Q^{*}(s, a)$。
 
 
+## 训练 Tricks
+- 为了避免序列中的相关性造成的训练不稳定，几个 iterations 才会更新一次(训练中 10000 iterations 更新一次)。
+- experience replay （大小 10, 0000）。
+- $\epsilon$-greedy 策略：以 $\epsilon$ 概率选择 action，1 - $\epsilon$ 概率随机选择 action。
+- 为了在开始阶段鼓励模型去探索，$\epsilon$ 开始为1，之后慢慢下降到0。
+- 给 GroundTruth $G = [g_{0}, g_{1}, ..., g_{n}]$，初始点 $p_{0}^{'}$ 以 $\eta$ 概率选择 $g_{0}$，以 1 - $\eta$ 概率选择 $G$ 上的其他点。
+- 终止：遇到 GroundTruth 的最后一个点或者达到了最大的 episode 长度。
+- batch_size = 8 lr = 0.0005
+- 前进偏移量 offset $k$ = 1
+  
+# 追踪 Tricks
+- 为了进一步稳定追踪过程，对网络输出的 action-value 施加 momentum：$r_{t} = \alpha r_{t - 1} + (1- \alpha) r_{t}$
+- 追踪停止：追踪移动出边界或者形成了一个环（追踪的点之前访问过）
 
 
-
-## 算法流程
-
-
-## 创新点
+## 模型
+- Conv: 32 filters, size 4\*4\*4, stride 2 -> BN -> ReLU
+- Conv: 46 filters, size 3\*3\*3, stride 2
+- FC: 256
+- FC: 128
+- FC: 6
 
 
 ## 启示
