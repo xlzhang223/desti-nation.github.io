@@ -11,7 +11,7 @@ From MICCAI 2018
 ---
 
 ## 1 题目
- Automated Object Tracing for Biomedical Image Segementation Using a Deep Convolution Neural Network
+[Automated Object Tracing for Biomedical Image Segementation Using a Deep Convolution Neural Networ](https://link.springer.com/chapter/10.1007/978-3-030-00937-3_78)
 
 ## 2 背景
 当前分割技术可能导致分割结果不连续
@@ -23,18 +23,18 @@ From MICCAI 2018
 
 ![mark](http://pcxhsqn8a.bkt.clouddn.com/blog/180921/C24hg3F7fk.png?imageslim)
 
-## 算法流程
+## 5 算法流程
 ![mark](http://pcxhsqn8a.bkt.clouddn.com/blog/180921/g576f3i12H.png?imageslim)
 
-## 创新点
+## 6 创新点
 将分割问题重新定义为了边界追踪问题。
 
-## 启示
+## 7 启示
 - 追踪的时候可以`手工` or `利用其他网络的结果 ` 来给与初始追踪方向，前者人机结合的方法也可以称为`human-in-the-loop`。
 - 将 U-net 的分割概率图作为输入图片的一个通道。
 
 
-## 词汇
+## 8 词汇
 `methodology` 方法学，方法论
 
 `pathology` 病理学

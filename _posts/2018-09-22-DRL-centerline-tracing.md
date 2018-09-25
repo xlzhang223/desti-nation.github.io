@@ -12,7 +12,7 @@ From MICCAI 2018
 
 
 ## 1 题目
-Deep Reinforcement Learning for Vessel Centerline Tracing in Multi-modality 3D Volumes
+[Deep Reinforcement Learning for Vessel Centerline Tracing in Multi-modality 3D Volumes](https://link.springer.com/chapter/10.1007/978-3-030-00937-3_86)
 
 ## 2 背景
 前人做法：使用最短路径 / 构建损失评价指标
@@ -42,7 +42,7 @@ $$D(p_{t}, G) = \left \| \lambda (p_{t} - g_{d+k}) + (1-\lambda)(g_{d+k+1} - g_{
 $l$ 是凭借经验选择的阈值。接下来的操作和 Deep Q Learning 相同，用 $Q^{\pi}(s, a;\theta)$ 来逼近 $Q^{*}(s, a)$。
 
 
-## 训练 Tricks
+## 5 训练 Tricks
 - 为了避免序列中的相关性造成的训练不稳定，几个 iterations 才会更新一次(训练中 10000 iterations 更新一次)。
 - experience replay （大小 10, 0000）。
 - $\epsilon$-greedy 策略：以 $\epsilon$ 概率选择 action，1 - $\epsilon$ 概率随机选择 action。
@@ -52,19 +52,19 @@ $l$ 是凭借经验选择的阈值。接下来的操作和 Deep Q Learning 相�
 - batch_size = 8 lr = 0.0005
 - 前进偏移量 offset $k$ = 1
   
-# 追踪 Tricks
+## 6 追踪 Tricks
 - 为了进一步稳定追踪过程，对网络输出的 action-value 施加 momentum：$r_{t} = \alpha r_{t - 1} + (1- \alpha) r_{t}$
 - 追踪停止：追踪移动出边界或者形成了一个环（追踪的点之前访问过）
 
 
-## 模型
+## 7 模型
 - Conv: 32 filters, size 4\*4\*4, stride 2 -> BN -> ReLU
 - Conv: 46 filters, size 3\*3\*3, stride 2
 - FC: 256
 - FC: 128
 - FC: 6
 
-## 词汇
+## 8 词汇
 `vascular` 血管的
 
 `navigation` 导航，航行，航海
@@ -73,7 +73,7 @@ $l$ 是凭借经验选择的阈值。接下来的操作和 Deep Q Learning 相�
 
 `optimal` 最优的，最佳的
 
-## 参考资料
+## 9 参考资料
 - [Understanding RL: The Bellman Equations](https://joshgreaves.com/reinforcement-learning/understanding-rl-the-bellman-equations/)
 - [[笔记]Playing Atari with Deep Reinforcement Learning](https://junmo1215.github.io/paper/2017/11/03/Note-Playing-Atari-with-Deep-Reinforcement-Learning.html)
 - [Markdown下LaTeX公式、编号、对齐](https://www.zybuluo.com/fyywy520/note/82980)
