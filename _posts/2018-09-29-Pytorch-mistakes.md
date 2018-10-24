@@ -47,7 +47,7 @@ Converts a PIL Image or numpy.ndarray (H x W x C) in the range [0, 255] to a tor
 
 ## cross entropy 的 log 函数以 e 为底数
 ```Python
-torch.log(torch.Tensor([2.71828]))
+torch.log(torch.Tensor([2.71828])) = 1
 ```
 
 
