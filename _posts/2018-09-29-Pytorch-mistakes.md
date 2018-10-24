@@ -14,7 +14,7 @@ keywords: PyTorch
 
 记得把模型转化为 GPU 模式。
 
-```Python
+```python
 from model import UNet
 from torchsummary import summary
 
@@ -24,7 +24,7 @@ print(summary(model, (1, 32, 32)))
 
 # 多输出
 
-```Python
+```python
 def forward(self, x):
     # Do your stuff here
     ...
