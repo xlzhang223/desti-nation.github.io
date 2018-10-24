@@ -45,4 +45,9 @@ loss.backward()
 
 Converts a PIL Image or numpy.ndarray (H x W x C) in the range [0, 255] to a torch.FloatTensor of shape (C x H x W) in the range [0.0, 1.0].
 
+## cross entropy 的 log 函数以 e 为底数
+```Python
+torch.log(torch.Tensor([2.71828]))
+```
+
 
