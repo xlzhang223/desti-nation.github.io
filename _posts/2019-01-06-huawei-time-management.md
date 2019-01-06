@@ -11,5 +11,5 @@ keywords: 时间 管理
 ---
 
 
-![](https://github.com/desti-nation/desti-nation.github.io/raw/master/images/posts/bp/naotu.jpg)
+![](https://github.com/desti-nation/desti-nation.github.io/raw/master/images/posts/time/naotu.jpg)
 
