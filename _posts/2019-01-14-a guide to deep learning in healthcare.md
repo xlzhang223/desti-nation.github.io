@@ -10,7 +10,8 @@ keywords: 深度学习
 
 ---
 
-![1547452869983](D:\desti-nation.github.io\assets\images\1547452869983.png)
+![1547452869983](../assets/images/1547452869983.png)
+
 
 > 题目：A guide to deep learning in healthcare
 >
