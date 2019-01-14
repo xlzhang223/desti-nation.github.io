@@ -10,7 +10,7 @@ keywords: 深度学习
 
 ---
 
-![1547452869983](../assets/images/1547452869983.png)
+![1547453333020](../assets/images/1547453333020.png)
 
 
 > 题目：A guide to deep learning in healthcare
